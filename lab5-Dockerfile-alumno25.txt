@@ -1,0 +1,10 @@
+FROM python:3.11
+
+RUN pip install\
+    jupyter \
+    numpy \
+    numba
+
+COPY pi-solution-alumno25.ipynb /app/
+
+CMD ["ipython", "/app/pi-solution-alumno25.ipynb", "100000"]
